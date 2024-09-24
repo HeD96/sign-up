@@ -6,7 +6,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -18,26 +18,96 @@ html {
 }
 
 body {
-    border: 2px solid red;
+    background-color: rgb(31, 31, 31);
 }
 
 main {
-    border: 2px solid blue;
+    background-color: rgba(249, 250, 251, 255);
+    width: 85%;
+    margin: auto;
+    display: flex;
+}
+
+.logo-section {
+    width: 37%;
+    background-image: url(images/background.jpg);
+    background-size: 140%;
+    background-position: -6rem;
+}
+
+.signup-section {
+    width: 63%;
+}
+
+.welcome-message {
+    padding-left: 4.5rem;
+    padding-right: 22rem;
+    padding-top: 15.5rem;
+    line-height: 1.1;
+
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.welcome-message p:first-child {
+    margin-bottom: 2rem;
 }
 
 input {
     display: block;
+    height: 2.5rem;
+    width: 22rem;
+    padding-inline: 0.3rem;
+    font-size: 1rem;
 }
 
 label {
     display: block;
-    margin-bottom: 0.3rem;
-    font-size: 0.8rem;
-    font-weight: bold;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(31, 41, 55, 255);
 }
 
 .inputs {
+    padding-left: 4rem;
+    padding-block: 2rem 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    background-color: white;
+}
+
+.inputs p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.input-layout {
     display: grid;
+    width: 85%;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
+}
+
+.account-creation {
+    padding-left: 4rem;
+    padding-bottom: 14rem;
+}
+
+.account-creation button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 4rem;
+    width: 18rem;
+
+    background-color: rgba(89, 109, 72, 255);
+    color: rgba(255, 255, 255, 255);
+}
+
+input:invalid {
+    border: 2px solid red;
 }
