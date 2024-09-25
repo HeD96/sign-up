@@ -6,7 +6,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Titillium Web", sans-serif;
 }
 
 *,
@@ -22,18 +22,48 @@ body {
 }
 
 main {
-    background-color: rgba(249, 250, 251, 255);
+    background-color: rgb(249, 250, 251);
     width: 85%;
     margin: auto;
     display: flex;
 }
 
+/* logo section */
+
 .logo-section {
+    position: relative;
     width: 37%;
     background-image: url(images/background.jpg);
     background-size: 140%;
     background-position: -6rem;
 }
+
+.company-logo {
+    position: absolute;
+    top: 21.2%;
+    left: 0;
+    height: 15rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img,
+.logo-img img {
+    height: 100%;
+}
+
+.company-logo p {
+    font-family: "logo-norse";
+    font-size: 10rem;
+    color: white;
+}
+
+/* signup section */
 
 .signup-section {
     width: 63%;
@@ -42,23 +72,58 @@ main {
 .welcome-message {
     padding-left: 4.5rem;
     padding-right: 22rem;
-    padding-top: 15.5rem;
-    line-height: 1.1;
+    padding-top: 16rem;
 
     font-size: 2.2rem;
     font-weight: 600;
+    line-height: 1.2;
 }
 
 .welcome-message p:first-child {
     margin-bottom: 2rem;
 }
 
+.inputs {
+    width: 100%;
+    padding-left: 4.5rem;
+    padding-block: 2rem 4rem;
+    margin-block: 6rem 4rem;
+
+    background-color: white;
+    box-shadow: 0 6px 8px 4px rgba(0, 0, 0, 0.05);
+}
+
+.inputs-layout {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.inputs p {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+    margin-bottom: 2rem;
+}
+
 input {
     display: block;
-    height: 2.5rem;
-    width: 22rem;
-    padding-inline: 0.3rem;
-    font-size: 1rem;
+    height: 2.8rem;
+    width: 24rem;
+    padding-inline: 0.8rem;
+    border-radius: 3px;
+    border: 1px solid rgb(185, 198, 214);
+    font-size: 1.4rem;
+    color: rgb(31, 41, 55);
+}
+
+input:focus {
+    outline: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+input:invalid {
+    outline: 1px solid rgba(255, 0, 0, 0.6);
 }
 
 label {
@@ -67,47 +132,34 @@ label {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 3px;
-    color: rgba(31, 41, 55, 255);
+    color: rgb(31, 41, 55);
 }
 
-.inputs {
-    padding-left: 4rem;
-    padding-block: 2rem 3rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    width: 100%;
-
-    background-color: white;
-}
-
-.inputs p {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.input-layout {
-    display: grid;
-    width: 85%;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
+/* account creation */
 
 .account-creation {
-    padding-left: 4rem;
-    padding-bottom: 14rem;
+    padding-left: 4.5rem;
+    padding-bottom: 16rem;
 }
 
 .account-creation button {
-    font-size: 1.4rem;
+    height: 4.5rem;
+    width: 22rem;
+    border-radius: 0.7rem;
+    border: none;
+    font-size: 1.6rem;
     font-weight: bold;
-    height: 4rem;
-    width: 18rem;
+    color: white;
 
-    background-color: rgba(89, 109, 72, 255);
-    color: rgba(255, 255, 255, 255);
+    background-color: rgb(89, 109, 72);
 }
 
-input:invalid {
-    border: 2px solid red;
+.account-creation p {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.account-creation a {
+    color: rgb(89, 109, 72);
+    font-weight: 600;
 }
